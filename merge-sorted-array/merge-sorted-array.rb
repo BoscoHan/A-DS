@@ -17,11 +17,7 @@ def merge(nums1, m, nums2, n)
     end
     
     while index < nums1.length do
-        if j >= n 
-            nums1[index] = longArr[i]
-            i+=1
-            
-        elsif longArr[i] < nums2[j]
+        if j >= n || longArr[i] < nums2[j]
             nums1[index] = longArr[i]
             i+=1
             

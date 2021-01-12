@@ -1,3 +1,4 @@
+[Discussion Post (created on 12/0/2021 at 0:1)](https://leetcode.com/problems/merge-sorted-array/discuss/1012797/Ruby-O(n)-time-O(n)-space)  
 <h2>88. Merge Sorted Array</h2><h3>Easy</h3><hr><div><p>Given two sorted integer arrays <code>nums1</code> and <code>nums2</code>, merge <code>nums2</code> into <code>nums1</code> as one sorted array.</p>
 
 <p>The number of elements initialized in <code>nums1</code> and <code>nums2</code> are <code>m</code> and <code>n</code> respectively. You may assume that <code>nums1</code> has enough space (size that is&nbsp;equal to <code>m + n</code>) to hold additional elements from <code>nums2</code>.</p>

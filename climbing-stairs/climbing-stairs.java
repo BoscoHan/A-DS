@@ -1,18 +1,18 @@
 class Solution {
-    public int climbStairs(int n) {
-        if (n <= 2)
-            return n;
-        
-        int prevA = 1;
-        int prevB = 2;
-        int steps = prevA + prevB;
-        
-        for (int i = 3; i <= n; i++) {
-            steps = prevA + prevB;
-            prevA = prevB;
-            prevB = steps;
-        }
-        
-        return steps;
-    }
+    public int climbStairs(int n) {
+        int[] count = new int[n + 1];
+        return recurse(n, count);
+    }
+    
+    public int recurse(int n, int[] count) {
+        if(n == 0) 
+            return 1;
+        if(n < 0) 
+            return 0;
+        if(count[n] > 0)
+            return count[n];
+        
+        count[n] = recurse(n -1, count) +  recurse(n - 2, count); 
+        return count[n];
+    }
 }

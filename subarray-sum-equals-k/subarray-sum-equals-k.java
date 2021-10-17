@@ -1,6 +1,5 @@
 class Solution {
     public int subarraySum(int[] nums, int k) {
-        //map to store <currSum, numberOfTimesSeenSum>
         Map<Integer, Integer> map = new HashMap();
         map.put(0, 1);
         
@@ -9,9 +8,8 @@ class Solution {
         
         for (int x : nums) {
             sum += x;
-            if (map.containsKey(sum - k)) {
+            if (map.containsKey(sum - k)) 
                 result += map.get(sum - k);
-            }
             
             map.put(sum, map.getOrDefault(sum, 0) + 1);
         }

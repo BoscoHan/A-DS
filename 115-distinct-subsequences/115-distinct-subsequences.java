@@ -1,8 +1,5 @@
 class Solution {
     public int numDistinct(String s, String t) {
-        if(t.length() == 0) return 1;
-        if(s.length() == 0) return 0;
-        
         int[][] memo = new int[s.length()][t.length()];
         Arrays.stream(memo).forEach(row -> Arrays.fill(row, -1));
 

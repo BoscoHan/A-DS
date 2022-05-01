@@ -29,9 +29,10 @@ class Solution {
     }
     
     private int find(int x) {
-        if (parents[x] != x)
-            return find(parents[x]);
-        
-        return x;
+        if (x == parents[x])
+            return x;
+
+        // with path compression:
+        return parents[x] = find(parents[x]);
     }
 }

@@ -15,9 +15,7 @@ class Solution {
         for (Car currCar : cars) {
             
             var timeToDest = (double)(target - currCar.posn) / ((double)currCar.speed);
-            
-            System.out.println(timeToDest);
-            
+                        
             // if prev timeToTarget is longer than the one about to be inserted, they form 1 fleet 
             if (stack.size() > 0 && stack.peek() >= timeToDest) {
                 timeToDest = stack.pop();
